@@ -1,0 +1,28 @@
+.station_title {
+  color: #333333;
+  font-size: 28px;
+  margin-left: 30px;
+  .title {
+    font-weight: bold;
+  }
+  .more {
+    font-size: 22px;
+    color: #f5f5f5;
+  }
+}
+.recommand_area {
+  margin-top: 10px;
+  .recommand_item {
+    margin-left: 30px;
+    Image {
+      width: 180px;
+      height: 180px;
+      border-radius: 16px;
+      margin-bottom: 5px;
+    }
+    Text {
+      color: #333333;
+      font-size: 22px;
+    }
+  }
+}
