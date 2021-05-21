@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import {View, Text, ScrollView, Image} from '@tarojs/components'
 import './index.scss'
 

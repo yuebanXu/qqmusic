@@ -1,0 +1,25 @@
+.top_area {
+  width: 100%;
+  height: 500px;
+  //background-size: cover;
+  //background-repeat: no-repeat;
+}
+.song_sheet_detail {
+  width: 650px;
+  .song_sheet_detail_cover {
+    width: 180px;
+    height: 180px;
+    border-radius: 16px;
+  }
+  .song_content {
+    width: 440px;
+    height: 180px;
+    .song_content_top {
+
+    }
+    .song_introduction {
+      color: #FFFFFF;
+      font-size: 22px;
+    }
+  }
+}

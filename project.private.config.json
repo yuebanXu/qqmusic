@@ -1,0 +1,22 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "歌单",
+          "pathName": "pages/songSheet/index",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

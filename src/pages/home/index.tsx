@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import {View, Text, Input} from '@tarojs/components'
 import RecommendScrollX from "./recommendScrollX";
 import SongSuplyStation from "./songAupplyStation";
@@ -24,7 +24,9 @@ const HomePage = () => {
         <Input value={searchKey} placeholder='周杰伦'></Input>
       </View>
       <RecommendScrollX />
-      <SongSuplyStation />
+      {[1, 2, 3, 4].map(() => {
+        return <SongSuplyStation />
+      })}
     </View>
   )
 }

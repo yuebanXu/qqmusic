@@ -1,6 +1,7 @@
 export default {
   pages: [
-    'pages/home/index'
+    'pages/home/index',
+    'pages/songSheet/index'
   ],
   window: {
     backgroundTextStyle: 'light',
