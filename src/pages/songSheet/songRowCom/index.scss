@@ -1,0 +1,34 @@
+.song_row_area {
+  width: 690px;
+  margin-top: 30px;
+  .song_row_left {
+    width: 85%;
+    .song_index {
+      color: #333333;
+      font-size: 28px;
+    }
+    .song_message {
+      width: 90%;
+      Text {
+        font-size: 22px;
+        color: #333333;
+      }
+      .song_name {
+        font-size: 28px;
+        color: #333333;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .song_row_right {
+    width: 15%;
+    Image {
+      width: 40px;
+      height: 40px;
+    }
+    Text {
+      color: #333333;
+      font-size: 28px;
+    }
+  }
+}

@@ -1,25 +1,84 @@
 .top_area {
   width: 100%;
   height: 500px;
-  //background-size: cover;
-  //background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(10px);
+  }
 }
 .song_sheet_detail {
   width: 650px;
+  position: absolute;
+  left: 50%;
+  top: 200px;
+  transform: translate(-50%, 0);
   .song_sheet_detail_cover {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     border-radius: 16px;
   }
   .song_content {
-    width: 440px;
-    height: 180px;
+    width: 380px;
+    height: 200px;
     .song_content_top {
-
+      .song_content_top_title {
+        color: #FFFFFF;
+        font-size: 30px;
+      }
+      .create_man {
+        margin-top: 10px;
+        .create_man_img {
+          width: 52px;
+          height: 52px;
+          border-radius: 50%;
+        }
+        .create_man_name {
+          font-size: 28px;
+          color: #FFFFFF;
+          margin: 0 15px 0 10px;
+        }
+        .create_man_follow {
+          padding: 0 15px;
+          line-height: 36px;
+          color: #FFFFFF;
+          font-size: 22px;
+          border: 2px solid #FFFFFF;
+          border-radius: 40px;
+        }
+      }
     }
     .song_introduction {
+      width: 100%;
       color: #FFFFFF;
       font-size: 22px;
+    }
+  }
+}
+.like_message {
+  width: 690px;
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  transform: translate(-50%, 0);
+  .like_item {
+    Image {
+      width: 45px;
+      height: 45px;
+      margin-right: 10px;
+    }
+    Text {
+      color: #FFFFFF;
+      font-size: 26px;
     }
   }
 }

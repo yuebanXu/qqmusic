@@ -1,5 +1,6 @@
 import {View} from '@tarojs/components'
 import SongSheetTop from "./songSheetTop";
+import SongRowCom from "./songRowCom";
 import './index.scss'
 
 // const songBg = 'https://uooc-file.oss-cn-shenzhen.aliyuncs.com/baoan/0c09fc7007314f90b568ae7d767c26d4.jpg'
@@ -10,8 +11,11 @@ import './index.scss'
 // const songBg = 'https://uooc-file.oss-cn-shenzhen.aliyuncs.com/baoan/src%3Dhttp___n.sinaimg.cn_sinacn_w400h267_20180304_c460-fwnpcnt8313802.jpg%26refer%3Dhttp___n.sinaimg.jpg'
 const SongSheetPage = () => {
   return (
-    <View>
+    <View className='flex_column_c'>
       <SongSheetTop />
+      {[1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8].map((item, index) => {
+        return <SongRowCom idx={index} />
+      })}
     </View>
   )
 }
