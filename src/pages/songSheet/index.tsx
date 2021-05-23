@@ -14,7 +14,7 @@ const SongSheetPage = () => {
     <View className='flex_column_c'>
       <SongSheetTop />
       {[1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8].map((item, index) => {
-        return <SongRowCom idx={index} />
+        return <SongRowCom key={index+1} idx={index} />
       })}
     </View>
   )

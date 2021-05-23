@@ -1,4 +1,4 @@
-import {  useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {Image, View, Text} from '@tarojs/components'
 import './index.scss'
 import greenPlay from '../../../assets/green_play.svg'

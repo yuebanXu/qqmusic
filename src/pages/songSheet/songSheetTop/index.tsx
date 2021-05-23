@@ -2,6 +2,9 @@ import {Image, View, Text} from '@tarojs/components'
 import './index.scss'
 import mom from '../../../assets/zaizai_mom.jpg'
 import greenPlay from '../../../assets/green_play.svg'
+import shareIcon from './images/fenxiang.svg'
+import messageIcon from './images/xiaoxi.svg'
+import likeIcon from './images/yixiangkan.svg'
 
 // const songBg = 'https://uooc-file.oss-cn-shenzhen.aliyuncs.com/baoan/0c09fc7007314f90b568ae7d767c26d4.jpg'
 // const songBg1 = 'https://uooc-file.oss-cn-shenzhen.aliyuncs.com/baoan/src%3Dhttp___02imgmini.eastday.com_mobile_20180922_20180922114313_0b044de61cf226e073f7daf5b5bae706_1.jpeg%26refer%3Dhttp___02imgmini.eastday.jpg'
@@ -28,15 +31,15 @@ const SongSheetTop = () => {
       </View>
       <View className='flex_row_cb like_message'>
         <View className='flex_row_c like_item'>
-          <Image src={greenPlay} />
+          <Image src={likeIcon} />
           <Text>10.7万</Text>
         </View>
         <View className='flex_row_c like_item'>
-          <Image src={greenPlay} />
+          <Image src={messageIcon} />
           <Text>1088</Text>
         </View>
         <View className='flex_row_c like_item'>
-          <Image src={greenPlay} />
+          <Image src={shareIcon} />
           <Text>分享</Text>
         </View>
       </View>
