@@ -1,7 +1,7 @@
 import {Image, View, Text} from '@tarojs/components'
 import './index.scss'
 import mom from '../../../assets/zaizai_mom.jpg'
-import greenPlay from '../../../assets/green_play.svg'
+// import greenPlay from '../../../assets/green_play.svg'
 import shareIcon from './images/fenxiang.svg'
 import messageIcon from './images/xiaoxi.svg'
 import likeIcon from './images/yixiangkan.svg'

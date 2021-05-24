@@ -17,12 +17,6 @@
           "pathName": "pages/songSheet/index",
           "query": "",
           "scene": null
-        },
-        {
-          "name": "歌单",
-          "pathName": "pages/songSheet/index",
-          "query": "",
-          "scene": null
         }
       ]
     }

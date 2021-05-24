@@ -66,6 +66,12 @@
   align-items: flex-start;
   justify-content: space-between;
 }
+.flex_column_sa {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+}
 .text_ellipsis_one {
   overflow: hidden;
   text-overflow:ellipsis;
