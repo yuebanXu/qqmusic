@@ -1,5 +1,6 @@
 import {useState} from "react";
-import {View, Swiper, SwiperItem, Image, Text} from '@tarojs/components'
+import {View, Swiper, SwiperItem, Image, Text, ScrollView} from '@tarojs/components'
+import TitleMoreCom from "../../../components/titleMoreCom";
 import './index.scss'
 import geshou from '../../../assets/geshou.svg'
 import paihang from '../../../assets/paihang.svg'
@@ -7,6 +8,7 @@ import kinds from '../../../assets/kinds.svg'
 import diantai from '../../../assets/diantai.svg'
 import zhibo from '../../../assets/zhibo.svg'
 import greenPlay from '../../../assets/green_play.svg'
+import {localImgUrls} from '../../../utils/imgUrls'
 
 const bannerList: Array<string> = [
   'https://uooc-file.oss-cn-shenzhen.aliyuncs.com/baoan/src%3Dhttp___02imgmini.eastday.com_mobile_20180922_20180922114313_0b044de61cf226e073f7daf5b5bae706_1.jpeg%26refer%3Dhttp___02imgmini.eastday.jpg',
@@ -92,13 +94,51 @@ const MusicMall = () => {
         </Swiper>
       </View>
       {/*排行榜*/}
-      <View className='rank_area'>
-        <View className='title_more_area'>
-          <Text>排行榜</Text>
-          <Text>更多</Text>
-        </View>
+      <View className='flex_column'>
+        <TitleMoreCom title='排行榜' />
+        <Swiper className='rank_content' nextMargin='15px'>
+          {localImgUrls.map((item) => {
+            return (
+              <SwiperItem>
+                <View className='flex_row_cb rank_img_song_item' style={{ 'backgroundImage': `url(${item})` }}>
+                  <Image className='rank_cover' src={item} />
+                  <View className='flex_column_sb rank_songs'>
+                    <Text className='rank_songs_title'>抖音排行榜</Text>
+                    <View className='rank_song_items'>
+                      {[1,2,3].map(() =>{
+                        return (
+                          <View className='flex_row_c rank_song_item'>
+                            <Text className='rank_song_idx'>01</Text>
+                            <Text className='rank_song_message'>爱你一万年 - 刘德华</Text>
+                          </View>
+                        )
+                      })}
+                    </View>
+                  </View>
+                </View>
+              </SwiperItem>
+            )
+          })}
+        </Swiper>
       </View>
       {/*直播*/}
+      <View className='flex_column'>
+        <TitleMoreCom title='直播' />
+        <View className='live_content'>
+          <ScrollView scrollX scrollWithAnimation style='height: 276px'>
+            <View className='flex_row scroll_live'>
+              {localImgUrls.map((item) => {
+                return (
+                  <View className='flex_column scroll_live_item'>
+                    <Image src={item} />
+                    <Text className='text_ellipsis_one'>无限温柔收藏者</Text>
+                  </View>
+                )
+              })}
+            </View>
+          </ScrollView>
+        </View>
+      </View>
     </View>
   )
 }
