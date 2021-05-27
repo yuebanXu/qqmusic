@@ -1,4 +1,5 @@
 import {useState} from "react";
+import Taro from "@tarojs/taro";
 import {View, Swiper, SwiperItem, Image, Text, ScrollView} from '@tarojs/components'
 import TitleMoreCom from "../../../components/titleMoreCom";
 import './index.scss'
@@ -20,10 +21,11 @@ const bannerList: Array<string> = [
 interface tabItem {
   id: number,
   name: string,
-  icon: string
+  icon: string,
+  url?: string
 }
 const tabList: Array<tabItem> = [
-  { id: 1, name: '歌手', icon: geshou },
+  { id: 1, name: '歌手', icon: geshou, url: '/pages/singerList/index' },
   { id: 2, name: '排行', icon: paihang },
   { id: 3, name: '分类歌单', icon: kinds },
   { id: 4, name: '音乐电台', icon: diantai },
@@ -34,6 +36,11 @@ const MusicMall = () => {
   const [activeSongCDIdx, setActiveSongCD] = useState(0)
   const clickActiveSongCD = (idx) => {
     setActiveSongCD(idx)
+  }
+  const toTabPage = (url) => {
+    Taro.navigateTo({
+      url: url
+    })
   }
   return (
     <View className='flex_column_c music_mall'>
@@ -49,7 +56,7 @@ const MusicMall = () => {
       <View className='flex_row_cb tab_area'>
         {tabList.map((item) => {
           return (
-            <View className='flex_column_cc tab_item'>
+            <View className='flex_column_cc tab_item' onClick={() => toTabPage(item.url)}>
               <Image src={item.icon} />
               <Text>{item.name}</Text>
             </View>
