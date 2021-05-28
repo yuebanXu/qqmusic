@@ -17,6 +17,12 @@
           "pathName": "pages/songSheet/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "歌手列表",
+          "pathName": "pages/singerList/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

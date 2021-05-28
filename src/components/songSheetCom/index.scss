@@ -1,13 +1,38 @@
-.title_more_area {
-  width: 690px;
-  margin-bottom: 20px;
-  .title_name {
-    color: #333333;
-    font-size: 30px;
-    font-weight: bold;
+.song_sheet_item {
+  margin-left: 30px;
+  position: relative;
+  .couver_img {
+    width: 180px;
+    height: 180px;
+    border-radius: 16px;
+    margin-bottom: 5px;
   }
-  .more_btn {
+  .play_count {
+    padding: 0 10px;
+    height: 50px;
+    backdrop-filter: blur(5px);
+    background: rgba(173,216,230,.8);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border-radius: 40px;
+    position: absolute;
+    top: 155px;
+    left: 0;
+    Image {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+    Text {
+      color: #FFFFFF;
+      font-size: 18px;
+    }
+  }
+  .sheet_name {
+    width: 100%;
+    word-break: break-all;
+    color: #333333;
     font-size: 22px;
-    color: #cccccc;
+    font-weight: 600;
+    margin-top: 30px;
   }
 }
